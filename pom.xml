@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>inc.nucleargames</groupId>
+    <artifactId>test-butler</artifactId>
+    <version>1.0.0</version>
+
+    <packaging>jar</packaging>
+
+    <name>Test Butler</name>
+    <description>A library for testing package creating</description>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Gr871</name>
+            <email>ky3971@yandex.ru</email>
+            <organization>Nuclear Games inc.</organization>
+        </developer>
+    </developers>
+
+    <dependencies>
+        <!-- Add your dependencies here -->
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations-java5</artifactId>
+            <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+    </dependencies>
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>6</source>
+                    <target>6</target>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+    <!--    <repositories>-->
+    <!--        <repository>-->
+    <!--            <id>github</id>-->
+    <!--            <name>GitHub Packages</name>-->
+    <!--            <url>https://maven.pkg.github.com/yourusername/*</url>-->
+    <!--        </repository>-->
+    <!--    </repositories>-->
+
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/js-studing/java-first-package</url>
+        </repository>
+    </distributionManagement>
+
+</project>
+
