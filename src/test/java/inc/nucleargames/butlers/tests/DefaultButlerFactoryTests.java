@@ -17,5 +17,6 @@ public class DefaultButlerFactoryTests {
         final var butler = DefaultButlerFactory.Create();
 
         Assert.assertEquals("Hello and welcome!", butler.greet());
+        Assert.assertEquals("123", butler.greet());
     }
 }
