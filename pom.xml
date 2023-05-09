@@ -5,31 +5,32 @@
 
     <modelVersion>4.0.0</modelVersion>
 
+    <!-- === Publishing info === -->
+
+    <!-- (!!!) Configure package info -->
     <groupId>inc.nucleargames</groupId>
     <artifactId>test-butler</artifactId>
     <version>1.0.0</version>
 
-    <packaging>jar</packaging>
-
     <name>Test Butler</name>
     <description>A library for testing package creating</description>
 
-    <licenses>
-        <license>
-            <name>MIT License</name>
-            <url>https://opensource.org/licenses/MIT</url>
-        </license>
-    </licenses>
+    <!-- (!!!) Set up publishing repository -->
+    <distributionManagement>
+        <repository>
+            <id>github</id>
+            <name>GitHub Packages</name>
+            <url>https://maven.pkg.github.com/js-studing/java-first-package</url>
+        </repository>
+    </distributionManagement>
 
-    <developers>
-        <developer>
-            <name>Gr871</name>
-            <email>ky3971@yandex.ru</email>
-            <organization>Nuclear Games inc.</organization>
-        </developer>
-    </developers>
+    <!-- (!!!) The produced type flag (use for developing packages) -->
+    <packaging>jar</packaging>
+
+    <!-- === Build info === -->
+
     <properties>
-        <!-- Set up Java Version to compile -->
+        <!-- (!!!) Set up Java Version to compile -->
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
     </properties>
@@ -38,13 +39,21 @@
         <!-- Add your dependencies here -->
     </dependencies>
 
-    <distributionManagement>
-        <repository>
-            <id>github</id>
-            <name>GitHub Packages</name>
-            <url>https://maven.pkg.github.com/js-studing/java-first-package</url>
-        </repository>
-    </distributionManagement>
+    <!-- === Not obvious info === -->
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>https://opensource.org/licenses/MIT</url>
+        </license>
+    </licenses>
+    <developers>
+        <developer>
+            <name>Gr871</name>
+            <email>ky3971@yandex.ru</email>
+            <organization>Nuclear Games inc.</organization>
+        </developer>
+    </developers>
 
 </project>
 
