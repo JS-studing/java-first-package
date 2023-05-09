@@ -16,8 +16,6 @@ public final class DefaultButlerFactory {
      * Create butler.
      * @return IButler.
      */
-    @org.jetbrains.annotations.NotNull
-    @org.jetbrains.annotations.Contract(value = " -> new", pure = true)
     public static IButler Create() {
         return new ButlerImpl();
     }
