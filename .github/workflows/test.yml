@@ -1,0 +1,27 @@
+name: Running tests
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Set up Java 17
+        uses: actions/setup-java@v3
+        with:
+          distribution: 'oracle'
+          java-version: 17
+          server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
+          settings-path: ${{ github.workspace }} # location for the settings.xml file
+
+      - name: Test with Maven
+        run: mvn -B test --file pom.xml # Should compile due running
